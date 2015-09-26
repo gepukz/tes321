@@ -34,7 +34,7 @@ public class insertdata_fragment extends Fragment {
                 {
                     Toast.makeText(getContext(),"nama harus diisi", Toast.LENGTH_SHORT ).show();
                 }
-                else if(nama.getText().toString().equalsIgnoreCase(""))
+                else if(umur.getText().toString().equalsIgnoreCase(""))
                 {
                     Toast.makeText(getContext(),"umur harus diisi ", Toast.LENGTH_SHORT ).show();
                 }

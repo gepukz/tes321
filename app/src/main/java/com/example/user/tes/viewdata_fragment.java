@@ -7,6 +7,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -47,7 +48,8 @@ public class viewdata_fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.view_data, container, false);
 
-       // toolbar = (Toolbar) rootView.findViewById(R.id.toolbar);
+
+        //Log.e("satu", "dua")
 
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         mLayoutManager = new LinearLayoutManager(getActivity());
@@ -55,12 +57,11 @@ public class viewdata_fragment extends Fragment {
 
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-
         //get activity selalu error kalau di cast ke appcompatactivity,
         //errornya cannot be cast to android.support.v7.app.AppCompatActivity
 
 
-        //AppCompatActivity activity = (AppCompatActivity) getActivity();
+       // AppCompatActivity activity = (AppCompatActivity) getActivity();
         //activity.setSupportActionBar(toolbar);
 
         mAdapter = new MyAdapter(MainActivity.list_nama, MainActivity.list_umur);

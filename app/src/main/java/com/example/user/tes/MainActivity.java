@@ -3,6 +3,7 @@ package com.example.user.tes;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -10,10 +11,10 @@ import android.support.v4.app.FragmentTransaction;
 
 import java.util.ArrayList;
 
-public class MainActivity extends FragmentActivity implements viewdata_fragment.fab_onclick {
+public class MainActivity extends AppCompatActivity implements viewdata_fragment.fab_onclick {
    public static ArrayList<String> list_nama;
    public static ArrayList<Integer> list_umur;
-    //Toolbar toolbar;
+Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +31,11 @@ public class MainActivity extends FragmentActivity implements viewdata_fragment.
         list_umur.add(30);
         list_umur.add(28);
 
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
 
-        
+        setSupportActionBar(toolbar);
+
+
         // Create an instance of ExampleFragment
         viewdata_fragment firstFragment = new viewdata_fragment();
 
