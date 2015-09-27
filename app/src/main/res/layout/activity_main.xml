@@ -10,7 +10,18 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="128dp"
-        android:background="@color/ColorPrimaryDark"/>
+        android:background="@drawable/manutd_banner">
+
+     <!--   <ImageView
+            android:layout_width="90dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ronaldo"/>
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="120dp"
+            android:src="@drawable/manchesterunited"/>-->
+
+        </android.support.v7.widget.Toolbar>
 
     <RelativeLayout
         android:layout_width="fill_parent"

@@ -38,7 +38,7 @@ MyAdapter(ArrayList<String> nama, ArrayList<Integer> umur)
     public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
 
         View v = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.list_item, viewGroup, false);
+                .inflate(R.layout.cardview, viewGroup, false);
 
         return new ViewHolder(v);
     }

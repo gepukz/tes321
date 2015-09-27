@@ -33,7 +33,12 @@ Toolbar toolbar;
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
 
+
+
+
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+       // toolbar.setLogo(R.drawable.ronaldo);
 
 
         // Create an instance of ExampleFragment
