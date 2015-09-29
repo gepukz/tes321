@@ -41,8 +41,11 @@ public class insertdata_fragment extends Fragment {
                 else
                 {
 
-                    MainActivity.list_nama.add(String.valueOf(nama.getText()));
-                    MainActivity.list_umur.add(Integer.parseInt(umur.getText().toString()));
+                    footballer baru = new footballer(nama.getText().toString(), Integer.parseInt(umur.getText().toString()));
+                    MainActivity.list_footballer.add(baru);
+
+                   // MainActivity.list_nama.add(String.valueOf(nama.getText()));
+                   // MainActivity.list_umur.add(Integer.parseInt(umur.getText().toString()));
 
 
                     getActivity().onBackPressed();

@@ -13,8 +13,7 @@ import java.util.ArrayList;
  */
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
-    ArrayList<String> nama;
-    ArrayList<Integer> umur;
+    ArrayList<footballer> footballer;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
@@ -27,10 +26,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         }
     }
 
-MyAdapter(ArrayList<String> nama, ArrayList<Integer> umur)
+MyAdapter(ArrayList<footballer> footballer)
 {
-    this.nama = nama;
-    this.umur= umur;
+
+    this.footballer = footballer;
 }
 
 
@@ -45,13 +44,13 @@ MyAdapter(ArrayList<String> nama, ArrayList<Integer> umur)
 
     @Override
     public void onBindViewHolder(MyAdapter.ViewHolder holder, int position) {
-        holder.namaTextView.setText(nama.get(position));
-        holder.umurTextView.setText(""+umur.get(position));
+        holder.namaTextView.setText(footballer.get(position).getNama());
+        holder.umurTextView.setText(""+footballer.get(position).getUmur());
 
     }
 
     @Override
     public int getItemCount() {
-        return nama.size();
+        return footballer.size();
     }
 }

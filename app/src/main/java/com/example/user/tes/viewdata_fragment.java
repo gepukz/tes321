@@ -52,7 +52,7 @@ public class viewdata_fragment extends Fragment {
         //Log.e("satu", "dua")
 
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
-        mRecyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL_LIST));
+
 
         mLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setHasFixedSize(true);
@@ -66,7 +66,7 @@ public class viewdata_fragment extends Fragment {
        // AppCompatActivity activity = (AppCompatActivity) getActivity();
         //activity.setSupportActionBar(toolbar);
 
-        mAdapter = new MyAdapter(MainActivity.list_nama, MainActivity.list_umur);
+        mAdapter = new MyAdapter(MainActivity.list_footballer);
         // Set CustomAdapter as the adapter for RecyclerView.
         mRecyclerView.setAdapter(mAdapter);
 

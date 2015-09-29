@@ -12,8 +12,8 @@ import android.support.v4.app.FragmentTransaction;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements viewdata_fragment.fab_onclick {
-   public static ArrayList<String> list_nama;
-   public static ArrayList<Integer> list_umur;
+   public static ArrayList<footballer> list_footballer;
+   //public static ArrayList<Integer> list_umur;
 Toolbar toolbar;
 
     @Override
@@ -21,19 +21,13 @@ Toolbar toolbar;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-      list_nama = new ArrayList<String>();
-      list_umur = new ArrayList<Integer>();
-
-        list_nama.add("ronaldo");
-        list_nama.add("messi");
-
-        list_umur.add(30);
-        list_umur.add(28);
+        list_footballer = new ArrayList<footballer>();
+        footballer ronaldo = new footballer("ronaldo", 30);
+        footballer messi = new footballer("messi", 28);
+        list_footballer.add(ronaldo);
+        list_footballer.add(messi);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-
-
 
 
         setSupportActionBar(toolbar);
